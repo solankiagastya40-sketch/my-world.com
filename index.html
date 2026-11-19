@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f6f5f0">
+  <meta name="description" content="Meet Agastya Singh Solank: a curious learner exploring artificial intelligence, creative technology, and the ideas shaping tomorrow.">
+  <title>Agastya Singh Solank — Curious about what’s next</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17201d;
+      --muted: #68716b;
+      --paper: #f6f5f0;
+      --white: #fffefa;
+      --green: #c9ef74;
+      --orange: #ff7654;
+      --line: rgba(23, 32, 29, .13);
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: "Segoe UI", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    img { display: block; width: 100%; }
+    .wrap { width: min(1120px, calc(100% - 64px)); margin-inline: auto; }
+    .skip-link {
+      position: absolute;
+      z-index: 5;
+      top: 12px;
+      left: 12px;
+      padding: 12px 16px;
+      transform: translateY(-160%);
+      border-radius: 6px;
+      background: var(--white);
+    }
+    .skip-link:focus { transform: translateY(0); }
+
+    header {
+      height: 82px;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid var(--line);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .brand-mark {
+      display: grid;
+      width: 38px;
+      height: 38px;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--ink);
+      color: var(--green);
+      font: 20px var(--serif);
+    }
+    .brand-name { font-size: 13px; font-weight: 650; letter-spacing: -.02em; }
+    .nav-links { display: flex; align-items: center; gap: 32px; }
+    .nav-links a {
+      font-size: 12px;
+      text-decoration: none;
+      color: #47504a;
+      transition: color .2s ease;
+    }
+    .nav-links a:hover { color: var(--orange); }
+    .nav-links .nav-cta {
+      padding: 11px 17px;
+      border: 1px solid var(--ink);
+      border-radius: 99px;
+      color: var(--ink);
+    }
+    .nav-links .nav-cta:hover { background: var(--ink); color: var(--white); }
+
+    .hero {
+      min-height: 610px;
+      display: grid;
+      grid-template-columns: 1.03fr .97fr;
+      align-items: center;
+      gap: 45px;
+      padding-block: 74px 82px;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 0 23px;
+      color: #59635b;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    .eyebrow::before {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--orange);
+      content: "";
+    }
+    h1 {
+      max-width: 570px;
+      margin: 0;
+      font: 400 clamp(54px, 7vw, 88px)/.99 var(--serif);
+      letter-spacing: -.065em;
+    }
+    h1 em { color: #527444; font-weight: 400; }
+    .hero-copy {
+      max-width: 425px;
+      margin: 25px 0 29px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.8;
+    }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      gap: 13px;
+      padding: 14px 19px;
+      border-radius: 99px;
+      background: var(--ink);
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform .2s ease, background .2s ease;
+    }
+    .button:hover { transform: translateY(-2px); background: #35423b; }
+    .button span { font-size: 17px; line-height: 10px; }
+    .visual {
+      position: relative;
+      min-height: 430px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-image {
+      width: min(82%, 405px);
+      height: 430px;
+      object-fit: cover;
+      border-radius: 49% 49% 18px 18px;
+      background: #d3ded5;
+    }
+    .image-label {
+      position: absolute;
+      right: -2px;
+      bottom: 40px;
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      padding: 14px 17px;
+      border: 1px solid rgba(23, 32, 29, .08);
+      border-radius: 13px;
+      background: var(--white);
+      box-shadow: 0 12px 35px rgba(27, 38, 29, .09);
+      font-size: 11px;
+      font-weight: 600;
+    }
+    .spark {
+      display: grid;
+      width: 31px;
+      height: 31px;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--green);
+      font-size: 16px;
+    }
+    .orbit {
+      position: absolute;
+      top: 35px;
+      right: 3px;
+      display: grid;
+      width: 64px;
+      height: 64px;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--orange);
+      color: white;
+      font: 30px var(--serif);
+      transform: rotate(-12deg);
+    }
+    .scroll-note {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 37px;
+      color: #828880;
+      font-size: 9px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    .scroll-note::before { width: 34px; height: 1px; background: #abb0a8; content: ""; }
+
+    .ticker { overflow: hidden; background: var(--green); }
+    .ticker-inner {
+      min-height: 63px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(18px, 4vw, 50px);
+      white-space: nowrap;
+    }
+    .ticker span { font-size: 10px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+    .ticker .star { color: #597444; font-size: 18px; }
+
+    section { scroll-margin-top: 28px; }
+    .about { padding-block: 112px 105px; }
+    .section-heading {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 40px;
+      margin-bottom: 43px;
+    }
+    .section-heading h2 {
+      max-width: 530px;
+      margin: 0;
+      font: 400 clamp(40px, 5vw, 58px)/1.06 var(--serif);
+      letter-spacing: -.055em;
+    }
+    .section-heading h2 em { color: #6b8559; }
+    .section-aside {
+      max-width: 295px;
+      margin: 0 0 4px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.75;
+    }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .about-card {
+      position: relative;
+      min-height: 320px;
+      overflow: hidden;
+      border-radius: 12px;
+      background: #d9e1d4;
+    }
+    .about-card img { height: 100%; min-height: 320px; object-fit: cover; transition: transform .6s ease; }
+    .about-card:hover img { transform: scale(1.035); }
+    .about-card::after {
+      position: absolute;
+      inset: 30% 0 0;
+      background: linear-gradient(transparent, rgba(14, 23, 20, .72));
+      content: "";
+    }
+    .card-caption { position: absolute; z-index: 1; right: 25px; bottom: 24px; left: 25px; color: white; }
+    .card-caption small { display: block; margin-bottom: 7px; color: rgba(255,255,255,.74); font-size: 9px; letter-spacing: .14em; text-transform: uppercase; }
+    .card-caption strong { font: 400 28px var(--serif); }
+    .about-note {
+      display: flex;
+      min-height: 320px;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 30px;
+      border-radius: 12px;
+      background: #ecebe3;
+    }
+    .note-mark { color: #7a8b69; font: 45px var(--serif); line-height: .8; }
+    .about-note p { max-width: 420px; margin: 25px 0; font: 400 clamp(22px, 3vw, 31px)/1.4 var(--serif); letter-spacing: -.025em; }
+    .note-signoff { color: var(--muted); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; }
+
+    .interests { padding-block: 82px 95px; background: var(--ink); color: var(--white); }
+    .interests .eyebrow { color: #aab4aa; }
+    .interests .eyebrow::before { background: var(--green); }
+    .interests h2 { max-width: 550px; margin: 0 0 42px; font: 400 clamp(39px, 5vw, 56px)/1.08 var(--serif); letter-spacing: -.05em; }
+    .interest-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .interest-card {
+      min-height: 238px;
+      padding: 23px;
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 10px;
+      transition: background .2s ease, transform .2s ease;
+    }
+    .interest-card:hover { transform: translateY(-4px); background: rgba(255,255,255,.06); }
+    .interest-number { color: var(--green); font: 19px var(--serif); }
+    .interest-card h3 { margin: 43px 0 10px; font: 400 22px var(--serif); }
+    .interest-card p { max-width: 270px; margin: 0; color: #b7c0b9; font-size: 12px; line-height: 1.7; }
+
+    .closing { padding-block: 94px 100px; text-align: center; }
+    .closing .eyebrow { justify-content: center; }
+    .closing h2 { max-width: 680px; margin: 0 auto 20px; font: 400 clamp(42px, 6vw, 68px)/1.05 var(--serif); letter-spacing: -.06em; }
+    .closing h2 em { color: #668250; }
+    .closing p { max-width: 430px; margin: 0 auto 27px; color: var(--muted); font-size: 13px; line-height: 1.8; }
+    .closing .button { background: var(--orange); color: var(--ink); }
+    .closing .button:hover { background: #ff8c70; }
+    footer { border-top: 1px solid var(--line); }
+    .footer-inner { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .footer-inner p { margin: 0; color: var(--muted); font-size: 10px; }
+    .footer-mark { color: #6e7c66; font: 21px var(--serif); }
+
+    @media (max-width: 760px) {
+      .wrap { width: min(100% - 40px, 560px); }
+      header { height: 70px; }
+      .nav-links { gap: 17px; }
+      .nav-links a { font-size: 11px; }
+      .nav-links a:nth-child(2) { display: none; }
+      .nav-links .nav-cta { padding: 9px 13px; }
+      .hero { min-height: auto; grid-template-columns: 1fr; gap: 25px; padding-block: 67px 56px; }
+      .hero-copy { max-width: 490px; }
+      .visual { min-height: 370px; }
+      .hero-image { width: min(76%, 340px); height: 365px; }
+      .orbit { right: 8%; top: 16px; }
+      .image-label { right: 4%; bottom: 25px; }
+      .scroll-note { margin-top: 27px; }
+      .ticker-inner { justify-content: flex-start; overflow: hidden; }
+      .ticker span { font-size: 9px; }
+      .about { padding-block: 76px; }
+      .section-heading { align-items: flex-start; flex-direction: column; gap: 17px; margin-bottom: 29px; }
+      .section-aside { max-width: 450px; }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-card, .about-card img { min-height: 270px; }
+      .about-note { min-height: 260px; }
+      .interests { padding-block: 68px; }
+      .interest-grid { grid-template-columns: 1fr; }
+      .interest-card { min-height: 185px; }
+      .interest-card h3 { margin-top: 26px; }
+      .closing { padding-block: 74px; }
+    }
+    @media (max-width: 420px) {
+      .wrap { width: calc(100% - 32px); }
+      .brand-name { font-size: 11px; }
+      .nav-links { gap: 11px; }
+      .hero { padding-top: 55px; }
+      .hero-image { height: 330px; }
+      .visual { min-height: 340px; }
+      .image-label { right: 0; }
+      .ticker-inner { gap: 17px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <nav class="nav wrap" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="Agastya home">
+        <span class="brand-mark" aria-hidden="true">A</span>
+        <span class="brand-name">Agastya Singh Solank</span>
+      </a>
+      <div class="nav-links">
+        <a href="#about">A little about me</a>
+        <a href="#interests">What I’m curious about</a>
+        <a class="nav-cta" href="#connect">Say hello <span aria-hidden="true">↗</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <div class="wrap">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div>
+          <p class="eyebrow">A curious mind exploring AI</p>
+          <h1 id="hero-title">Hello, I’m <em>Agastya.</em></h1>
+          <p class="hero-copy">I’m interested in artificial intelligence and the ways it can turn bold ideas into something real. I’m here to keep learning, ask better questions, and explore what’s possible.</p>
+          <a class="button" href="#about">A little about me <span aria-hidden="true">↓</span></a>
+          <div class="scroll-note">Always learning, always wondering</div>
+        </div>
+        <div class="visual" aria-label="Abstract image representing creative technology">
+          <img class="hero-image" src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Colorful abstract digital artwork inspired by artificial intelligence" fetchpriority="high">
+          <span class="orbit" aria-hidden="true">✳</span>
+          <div class="image-label"><span class="spark" aria-hidden="true">✦</span> Curious about what’s next</div>
+        </div>
+      </section>
+    </div>
+
+    <div class="ticker" aria-label="Interests">
+      <div class="ticker-inner wrap">
+        <span>Artificial intelligence</span><span class="star" aria-hidden="true">✳</span>
+        <span>Big ideas</span><span class="star" aria-hidden="true">✳</span>
+        <span>Creative technology</span><span class="star" aria-hidden="true">✳</span>
+        <span>Always learning</span>
+      </div>
+    </div>
+
+    <section class="about wrap" id="about" aria-labelledby="about-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">The person behind the curiosity</p>
+          <h2 id="about-title">A little about <em>me.</em></h2>
+        </div>
+        <p class="section-aside">I’m Agastya Singh Solank—a curious learner with a growing interest in AI and the ideas that bring people and technology together.</p>
+      </div>
+      <div class="about-grid">
+        <article class="about-card">
+          <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Glowing view of Earth from space, with city lights" loading="lazy">
+          <div class="card-caption"><small>A world of possibilities</small><strong>Think bigger.</strong></div>
+        </article>
+        <article class="about-card">
+          <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Colorful geometric light installation representing new ideas" loading="lazy">
+          <div class="card-caption"><small>One question at a time</small><strong>Stay curious.</strong></div>
+        </article>
+        <div class="about-note">
+          <span class="note-mark" aria-hidden="true">“</span>
+          <p>I believe the best way to understand the future is to stay curious, keep learning, and be open to new ideas.</p>
+          <span class="note-signoff">A thought I’m carrying with me</span>
+        </div>
+        <article class="about-card">
+          <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Friendly robot representing the human side of technology" loading="lazy">
+          <div class="card-caption"><small>Technology with a human side</small><strong>Imagine more.</strong></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="interests" id="interests" aria-labelledby="interests-title">
+      <div class="wrap">
+        <p class="eyebrow">Things on my mind</p>
+        <h2 id="interests-title">What I’m excited to <em>explore.</em></h2>
+        <div class="interest-grid">
+          <article class="interest-card">
+            <span class="interest-number">01</span>
+            <h3>Artificial intelligence</h3>
+            <p>Learning how AI works and how thoughtful ideas can make it useful in everyday life.</p>
+          </article>
+          <article class="interest-card">
+            <span class="interest-number">02</span>
+            <h3>Creative technology</h3>
+            <p>Exploring the surprising things that happen when technology meets imagination.</p>
+          </article>
+          <article class="interest-card">
+            <span class="interest-number">03</span>
+            <h3>What comes next</h3>
+            <p>Staying open to new tools, fresh perspectives, and the next thing I can learn.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing wrap" id="connect" aria-labelledby="connect-title">
+      <p class="eyebrow">The beginning of something</p>
+      <h2 id="connect-title">Curiosity is a pretty good place to <em>start.</em></h2>
+      <p>This page is a small introduction to me and my interest in AI. There’s always more to discover—and I’m excited to keep exploring.</p>
+      <a class="button" href="#top">Back to the beginning <span aria-hidden="true">↑</span></a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner wrap">
+      <p>© <span id="year">2026</span> Agastya Singh Solank · Made with curiosity</p>
+      <span class="footer-mark" aria-hidden="true">A.</span>
+    </div>
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
